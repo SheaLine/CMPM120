@@ -1,0 +1,369 @@
+{
+    "Title": "Spirit Slopes",
+    "Credits": "Created by Shea Line (sline@ucsc.edu).",
+    "InitialLocation": "Base",
+    "Locations": {
+        "Base": {
+            "Body": "Welcome to the Slopes. It's time for the most stoke you have ever experienced in your life. The Lodge is that way!",
+            "Choices":[
+                {
+                    "Text" : "Go to lodge",
+                    "Target": "Lodge"
+                }
+                
+            ]
+        },
+        "Lodge": {
+            "Body": "Welcome to the Lodge! This is the hub for all shredding experiences. Go explore the whole mountain, then maybe you can get some food here!",
+            "Choices": [
+                {
+                    "Text" : "Get on Park Lift.",
+                    "Target": "Park"
+                },
+                {
+                    "Text" : "Get on Back country Lift.",
+                    "Target": "Backcountry"
+                }
+            ],
+            "Visited_Everywhere":[
+                {
+                    "Text" : "Get food.",
+                    "Target" : "Cafe"
+                }
+            ]
+        },
+        "Cafe": {
+            "Body": "You walk into the cafe and you are STARVING! You walk up to the counter to order a pre-made burger that has been siting on the counter under a heat lamp fort the past hour. You look up at the menu to see how much it is, then you promptly turn around and start to walk out of the cafe. The burger would have been 32 DOLLARS! You decide to just go to the water fountain instead. After you look up from getting a drink, you see some really old, but steezy snowboard boots. You just know in your mind that they are AVALANCH ASHER'S BOOTS. You can pick them up if you aren't already holding an item.",
+            "Choices":[
+                {
+                    "Text": "Go back outside the lodge.",
+                    "Target": "Lodge"
+                },
+                {
+                    "Text": "Pick up AVALANCHE ASHER'S BOOTS",
+                    "Item":"AVALANCHE ASHER'S BOOTS",
+                    "Action": "pickupItem",
+                    "currentLocation": "Cafe"
+                }
+            ]
+        },
+        "Park":{
+            "Body": "Wow, look at all the endless different lines we can take. All these park rats look so chill. More might pop up the more you explore!",
+            "Choices":[
+                {
+                    "Text" : "Go down small features.",
+                    "Target": "Small Features"
+                }
+            ],
+            "Gondola_visited":[
+                {
+                    "Text" : "Go down large features.",
+                    "Target" : "Large Features"
+                }
+            ]
+        },
+        "Small Features":{
+            "Body": "There's a nice little box you see set up perfectly in the distance. Over to the right of it you see a sick little jump too. Which one should you hit first?",
+            "Choices":[
+                {
+                    "Text" : "Hit box.",
+                    "Target": "Box"
+                },
+                {
+                    "Text": "Hit small jump.",
+                    "Target": "Small Jump"
+                }
+            ]
+        },
+        "Box":{
+            "Body": "Yeeewww!! Next time you should definitely try the jump!",
+            "Choices":[
+                {
+                    "Text" : "Get on park lift.",
+                    "Target": "Park"
+                },
+                {
+                    "Text": "Back to the lodge!",
+                    "Target": "Lodge"
+                }
+            ]
+        },
+        "Small Jump":{
+            "Body": "Yeeewww!! Next time you should definitely try the box (if you haven't) to make sure you've explored everything!",
+            "Choices":[
+                {
+                    "Text" : "Get on park lift.",
+                    "Target": "Park"
+                },
+                {
+                    "Text": "Back to the lodge.",
+                    "Target": "Lodge"
+                }
+            ]
+        },
+        "Large Features":{
+            "Body": "Wow these are some pretty crazy features. They are so much bigger than the small ones, this is going to be sick! What do you want to hit first? ",
+            "Choices":[
+                {
+                    "Text" : "Hit half pipe.",
+                    "Target": "Half Pipe"
+                },
+                {
+                    "Text": "Hit large jump.",
+                    "Target": "Large Jump"
+                }
+            ]
+        },
+        "Half Pipe":{
+            "Body": "This is the biggest half pipe ever, ready to throw down?",
+            "Choices":[
+                {
+                    "Text" : "Backside Air",
+                    "Target": "Half Pipe"
+                },
+                {
+                    "Text" : "Frontside Air",
+                    "Target": "Half Pipe"
+                },
+                {
+                    "Text" : "McTwist",
+                    "Target": "Half Pipe"
+                },
+                {
+                    "Text": "Finish the Run",
+                    "Target": "Lodge"
+                }
+            ]
+        },
+        "Large Jump":{
+            "Body": "So many opportunities with a jump this big, just make sure you have enough speed!",
+            "Choices":[
+                {
+                    "Text" : "Backflip",
+                    "Target":"Side Path"
+                },
+                {
+                    "Text" : "Tail Grab",
+                    "Target":"Side Path"
+                },
+                {
+                    "Text" : "Method Air",
+                    "Target":"Side Path"
+                },
+                {
+                    "Text": "Wildcat",
+                    "Target": "Side Path"
+                }
+            ]
+        },
+        "Side Path":{
+            "Body": "Wow that was so clean! You land and see a narrow side path. You go down this path (of course), but on your first turn you catch an edge! You fall pretty hard, but when you get up you see a nose of a board sticking out of the snow. After further investigation, you see that it is AVALANCHE ASHER'S SNOWBOARD. You can pick this up if you aren't already holding an item!",
+            "Choices":[
+                {
+                    "Text" : "Continue down hill",
+                    "Target": "Rail"
+                },
+                {
+                    "Text": "Pick up AVALANCHE ASHER'S SNOWBOARD",
+                    "Action": "pickupItem",
+                    "Item": "AVALANCHE ASHER'S SNOWBOARD",
+                    "currentLocation": "Side Path"
+                }
+            ]
+            
+        },
+        "Rail":{
+            "Body": "You exit out of the side path and see a rail right before the lodge. Would you like to hit it?",
+            "Choices":[
+                {
+                    "Text" : "Hit the rail and go to lodge.",
+                    "Target": "Lodge"
+                },
+                {
+                    "Text": "Don't hit the rail and go to the lodge.",
+                    "Target": "Lodge"
+                }
+            ]
+        },
+        "Backcountry":{
+            "Body": "Welcome to the backcountry, where you will find the most fresh pow in the whole country. Pick which trail you want to go down!",
+            "Choices":[
+                {
+                    "Text" : "Go down Green",
+                    "Target": "Green"
+                },
+                {
+                    "Text": "Go down Blue",
+                    "Target": "Blue"
+                },
+                {
+                    "Text": "Go down Black",
+                    "Target": "Black"
+                }
+            ]
+        },
+        "Green":{
+            "Body": "Wow that was boring, I swear I saw a blue run right next to me, I wonder how I can access it?",
+            "Choices":[
+                {
+                    "Text" : "Take Backcountry lift.",
+                    "Target": "Backcountry"
+                },
+                {
+                    "Text": "Back to the lodge",
+                    "Target": "Lodge"
+                }
+            ]
+        },
+        "Blue":{
+            "Body": "This run was a lot steeper than the green, but I feel like there is more to it, I should come back after I explore more.",
+            "secretBody" : "Now that you have visited the Enchanted Gondola, you can see a trail that goes into the trees, that must be where Avalanche Asher would go!",
+            "Choices":[
+                {
+                    "Text" : "Take Backcountry lift.",
+                    "Target": "Backcountry"
+                },
+                {
+                    "Text": "Go back to the lodge.",
+                    "Target": "Lodge"
+                }
+            ],
+            "Gondola_visited":[
+                {
+                    "Text" : "Take tree run.",
+                    "Target" : "Tree Run"
+                }
+            ]
+        },
+        "Tree Run":{
+            "Body": "You carve hard on your toe edge and make it through a chute entering the run. This is some of the craziest terrain you have ever seen and you get a little overwhelmed. This causes you to loose your balance and slide out onto the snow. You just barely slide out right before a tree well. With a sigh of relief, you look into the tree well. Inside the well you can see some binding sticking out of the snow. You quickly realize that those are AVALANCHE ASHER'S BINDINGS! You can pick them up if you aren't holding any other items.",
+            "Choices":[
+                {
+                    "Text" : "Continue along and finish the run.",
+                    "Target": "Lodge"
+                },
+                {
+                    "Text": "Pick up AVALANCHE ASHER'S BINDINGS",
+                    "Action": "pickupItem",
+                    "Item": "AVALANCHE ASHER'S BINDINGS",
+                    "currentLocation": "Tree Run"
+                }
+            ]
+        },
+        "Black":{
+            "Body": "Ahh the classic black diamond, snowboarding's greatest delicacy. There's really only one option here...",
+            "Choices":[
+                {
+                    "Text" : "Surf through the deepest pow of your life.",
+                    "Target": "Gondola"
+                }
+            ]
+        },
+        "Gondola":{
+            "Body": "As you blast stylishly down the mountain, you notice the snow getting deeper and deeper, it is up to your neck now as you ride down. You then feel the floor beneath you fall. You crash down into a cave where you see an arrow pointing down a path that reads, \"Enchanted Gondola\".",
+            "secretBody": "Welcome back to the Enchanted Gondola. You just traveled through space and time to get here! Avalanche Asher is this way!",
+            "first_Choices":[
+                {
+                    "Text" : "Take the Gondola",
+                    "Target": "Top Of Gondola"
+                }
+            ],
+            "Gondola_visited":[
+                {
+                    "Text" : "Go to Avalanche Asher",
+                    "Target" : "Avalanche Asher 3"
+                }
+            ]
+        },
+        "Top Of Gondola":{
+            "Body": "You unstrap your bindings and start to walk down the path towards the gondola. You open the door, step in, and press a button inside. You hear a loud noise and then the gondola starts to move. The difference is it is going towards the center of the earth!",
+            "Choices": [
+                {
+                    "Text": "Keep going...",
+                    "Target": "Bottom Of Gondola"
+                }
+            ]
+        },
+        "Bottom Of Gondola":{
+            "Body": "The Gondola crashes down at a ginormous cave that seems like it has no end. You can hear screams of help at the end of the tunnel. Being the brave person you are, you walk towards the screams to see whats going on.",
+            "Choices": [
+                {
+                    "Text": "Continue...",
+                    "Target": "Avalanche Asher 1"
+                }
+            ]
+        },
+        "Avalanche Asher 1":{
+            "Body": "You see a man in a cage banging on the bars trying to get your attention. You quickly realize that it is Avalanche Asher! You can't believe your eyes as you are in the presence of greatness. You walk up to him and ask him whats wrong. He tells you that an evil witch locked him in a cage so she could use him as an offering for the endless winter curse. He tells you that she wants it to always be winter, so that she can ruin the ecosystem! He then points to the the wall of the cave, where there are some mysterious goggles hanging. Asher asks you to grab them for him.",
+            "Choices": [
+                {
+                    "Text": "Pick up goggles and bring them to Asher",
+                    "Target": "Avalanche Asher 2"
+                }
+            ]
+        },
+        "Avalanche Asher 2":{
+            "Body": "Asher takes the goggles and uses the buckle to break free of the cage. He thanks you and then asks you to go on an important mission to bring the rest of his snow gear back to him. The gear is scattered throughout the mountain and it is your job to find it. You can ride the Enchanted Gondola back to the lodge from here because it travels through space and time! Look for AVALANCHE ASHER'S SNOWBOARD, AVALANCHE ASHER'S BOOTS, and AVALANCHE ASHER'S BINDINGS, so he can shred off the mountain safely.",
+            "Choices": [
+                {
+                    "Text": "Take the Enchanted Gondola back to the Lodge",
+                    "Target": "Lodge"
+                }
+            ]
+        },
+        "Avalanche Asher 3":{
+            "Body": "Glad your back! Do you have any more gear for me?",
+            "Choices": [
+                {
+                    "Text": "\"No I don't just passing by.\"",
+                    "Target": "Lodge"
+                },
+                {
+                    "Text": "\"Yes! Here you go!\"",
+                    "Action": "giveItem",
+                    "currentLocation": "Avalanche Asher 3"
+                }
+            ]
+        },
+        "Cafe_Limbo":{
+            "Body": " ",
+            "Choices": [
+                {
+                    "Text": "Go back outside the lodge.",
+                    "Target": "Lodge"
+                }
+            ]
+        },
+        "Tree Run_Limbo":{
+            "Body": " ",
+            "Choices": [
+                {
+                    "Text" : "Continue along and finish the run.",
+                    "Target": "Lodge"
+                }
+            ]
+        },
+        "Side Path_Limbo":{
+            "Body": " ",
+            "Choices": [
+                {
+                    "Text" : "Continue down hill.",
+                    "Target": "Rail"
+                }
+            ]
+        },
+        "Avalanche Asher 3_Limbo":{
+            "Body": " ",
+            "Choices": [
+                {
+                    "Text" : "Continue the mission.",
+                    "Target": "Lodge"
+                }
+            ]
+        },
+        "End": {
+            "Body": "Congrats you have freed Asher and cured the curse of eternal winter!"
+        }
+    }
+}
+

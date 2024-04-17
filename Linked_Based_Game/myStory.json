@@ -1,0 +1,58 @@
+{
+    "Title": "Campus Life on the West Side",
+    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
+    "InitialLocation": "Kresge",
+    "Locations": {
+        "Kresge": {
+            "Body": "This is Kresge College, founded in 1971. The theme for this place is Power and Representation.",
+            "Choices": [
+                {
+                    "Text": "South",
+                    "Target": "Porter"
+                }
+            ]
+        },
+        "Porter": {
+            "Body": "This is Porter College, founded in 1969. The theme for this place is Ars Longa, Vita Brevis: Life is Short, Art Endures.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Kresge"
+                },
+                {
+                    "Text": "South",
+                    "Target": "Rachel Carson"
+                }
+            ]
+        },
+        "Rachel Carson": {
+            "Body": "Rachel Carson College, founded in 1972. The theme for this place is Environment and Society. I like this place because it has a basketball court.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Porter"
+                },
+                {
+                    "Text": "South",
+                    "Target": "Oakes"
+                }
+            ]
+        },
+        "Oakes": {
+            "Body": "Oakes College, founded in 1972. The theme for this place is Communicating Diversity for a Just Society.",
+            "Choices": [
+                {
+                    "Text": "North",
+                    "Target": "Rachel Carson"
+                },
+                {
+                    "Text": "South",
+                    "Target": "Beyond"
+                }
+            ]
+        },
+        "Beyond": {
+            "Body": "Grass, don't forget to check for ticks! Don't fall into any ravines either."
+        }
+    }
+}
