@@ -8,6 +8,7 @@ class Start extends Scene {
         every day of the winter until one day he just seemed to have vanished without reason.
         Ever since Avalanche Asher's disappearance, there has been an endless winter across
         the region.\n`);
+        this.engine.show("<br>");
         this.engine.addChoice("Begin the story");
 
         // add items for this particular game.
@@ -28,6 +29,7 @@ class Location extends Scene {
         if (key == "Blue" && this.engine.hasVisited("Avalanche Asher 1")) { this.engine.show(locationData.secretBody);}
         else {this.engine.show(locationData.Body);} // TODO: replace this text by the Body of the location data
         
+        //Gondola is my location-based mechanism
         if (key == "Gondola"){
             if (!this.engine.hasVisited("Avalanche Asher 1")){
                 for (let first of locationData.first_Choices){
@@ -85,6 +87,7 @@ class Location extends Scene {
     }
 
     handleChoice(choice) {
+        this.engine.show("<br>");
         if(choice.Target) {
             this.engine.show("&gt; "+ choice.Text);
             this.engine.gotoScene(Location, choice.Target);
