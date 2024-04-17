@@ -7,7 +7,7 @@ class Start extends Scene {
         effortlessly hitting the gnarliest jumps on the mountain. He used to be at the mountain
         every day of the winter until one day he just seemed to have vanished without reason.
         Ever since Avalanche Asher's disappearance, there has been an endless winter across
-        the region.\n`)
+        the region.\n`);
         this.engine.addChoice("Begin the story");
 
         // add items for this particular game.
